@@ -1,5 +1,5 @@
 # Addressing modes
-refer to `2-addressing_modes.asm`
+refer to [`2-addressing_modes.asm`](./2-addressing_modes.asm)
 
 ### the code
 * `.global _start`--> inform system(s)/people that there is a `_start` label ahead

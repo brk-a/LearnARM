@@ -1,5 +1,5 @@
 # Arithmetic and `cpsr`flags
-refer to `3-arithmetic_cpsr_flags.asm`
+refer to [`3-arithmetic_cpsr_flags.asm`](./3-arithmetic_cpsr_flags.asm)
 
 ### the code
 * `.global _start` --> inform system(s)/people that there is a `_start` label ahead 

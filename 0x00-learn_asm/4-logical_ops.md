@@ -1,5 +1,5 @@
 # Logical Operations
-refer to `4-logical_ops.asm`
+refer to [`4-logical_ops.asm`](./4-logical_ops.asm)
 
 ### the code
 * `.global _start` --> inform system(s)/people that there is a `_start` label ahead 

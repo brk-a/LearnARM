@@ -1,5 +1,5 @@
 # First Prog
-refer to `1-first_program.asm`
+refer to [`1-first_program.asm`](./1-first_program.asm)
 
 ### the code
 * `.global _start` --> inform system(s)/people that there is a `_start` label ahead
