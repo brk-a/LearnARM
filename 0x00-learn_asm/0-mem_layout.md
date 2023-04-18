@@ -23,8 +23,8 @@ worked with ARMv7 DE1-SoC 32-bit
     * `aspr` --> application programme status register. stores the state of the current instruction set
     * `cpsr` --> current programme status register. stores infomation about a programme (the status and control)
         * e.g. store the flag that signals to the system to include a `-` sign when one subtracts to numbers and the result is negative
-        * store the flag that signals a carry (6 plus 7 is 3 carry 1), decimal point. remainder (3 divide by 2 is 1 remainder 1) etc
-    * `spsr` --> saved programme status register. stores the value of the `cspr` when an exception is taken (occurs) so it can be retored after handling the exception. every exception handling mode can access its own `spsr`
+        * store the flag that signals a carry (6 plus 7 is 3 carry 1. also, 0xffffffff plus 0x00000001 has a diferent kind of carry), decimal point. remainder (3 divide by 2 is 1 remainder 1) etc
+    * `spsr` --> saved programme status register. stores the value of the `cspr` when an exception is taken (occurs) so it can be restored after handling the exception. every exception handling mode can access its own `spsr`
 
 ### ram
 * stores more data than a register
@@ -34,4 +34,4 @@ worked with ARMv7 DE1-SoC 32-bit
 #### stack memory
 * used to represent more advanced forms/types of data
     * e.g. lists/arrays of numbers
-* addresses are four bytes apart because sizeof(pointer) = 4 bytes
+* addresses are four bytes apart because sizeof(word) = 4 bytes in 32-bit architecture
