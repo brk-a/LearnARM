@@ -51,7 +51,7 @@ refer to [`6-conditionals_branches.asm`](./6-conditionals_branches.asm)
         cmp r0, r1
         ~~~
         `cmp` first performs `r0` minus `r1`. the result takes on one of three possible states:  positive number (meaning the contents of `r0` greater than `r1`), negative number (`r0` less than `r1`) or zero (`r0` == `r1`). it then sets the `C`, `N` or `Z` flag respectively in the `cpsr`
-    * say the result is positive (`r0` greater than `r1`). the result in `cmp` sets the `C` flag in the `cpsr` and directs to `bgt` (branch greater than). `bgt`, obviously, is a branch. it takes a _label_. said label is where the code for the _greater than_ branch is, therefore, it will be executed. once done, the programme carries on with the next line after `bgt` 
+    * say the result is positive (`r0` greater than `r1`). the result in `cmp` sets the `C` flag in the `cpsr` and directs to `bgt` (branch greater than). `bgt`, obviously, is a branch. it takes a _label_. said label is where the code for the _greater than_ branch is, therefore, it will be executed. once done, the programme carries on with the next line after the code in the relevant label 
         * all well and good but, what happens when the label does not exist?
             * not to worry; the programme carries on to the next line as though the `bgt` did not exist
         * notice that the code after the `bgt` is executed anyway; this might not be the desired effect. this is where branch always `bal` comes in. `bal` _always_ executes (think of the `default` case in `switch-case`). if `bgt` does not execute (e.g. `r0` less than `r1`), `bal` is performed
