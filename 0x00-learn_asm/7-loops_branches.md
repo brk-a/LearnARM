@@ -34,9 +34,11 @@ refer to [7-loops_branches.asm](./7-loops_branches.asm)
         * good question. an indicator; an indicator is how the system knows. there are a number of ways of setting an indicator. here are two:
             1. empty slots in memory (aka uninitialised memory). there, always, is a placeholder value to show that a memory slot is empty. in this case, the placeholder is 0xaaaaaaaa (2 billion and some change in decimal)
             2. null character in higher-level programming, especially C. a string, in C, is, simply, an array of characters terminated by the null character `\0`. example: the string "cat" in mem will be:
+
             |  0  |  1  |  2  |  3  |
             |:---:|:---:|:---:|:---:|
             |  c  |  a  |  t  | \0  |
+            
         * ARM limits the size of _literals_ to two hex values; `cmp` will not work as expected. here is where _constants_ excel. the op code/key word `equ` creates a constant. said constant does not have the size limit of a literal. in this case `equ` creates a constant called `endlist` and assigns the empty slot placeholder value to it. `cmp` can now be used to find the end of the list
         * uninitialised memory placeholders vary by architecture, manufacturer etc; pay attention to that
             * alternatively, define your own and apply it in the system
