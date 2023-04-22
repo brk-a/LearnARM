@@ -26,7 +26,7 @@ refer to [8-conditional_instruction_execution.asm](./8-conditional_instruction_e
     `addlt` stores decimal 1 in `r2` iff the result of the operation `cmp` is -ve, that is, the contents of `r0` are less than those of `r1`
 * `addlt` is `add` iff `l`ess `t`han. it performs addition on specified operands iff the `lt` condition is met
 * here are some ops that work the same way:
-~~~
+
 ||add|sub|mul|mov|
 |:---:|:---:|:---:|:---:|:---:|
 |gt|addgt|subgt|mulgt|movgt|
@@ -35,4 +35,3 @@ refer to [8-conditional_instruction_execution.asm](./8-conditional_instruction_e
 |le|addle|suble|mulle|movle|
 |eq|addeq|subeq|muleq|moveq|
 |ne|addne|subne|mulne|movne|
-~~~
