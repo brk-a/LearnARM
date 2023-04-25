@@ -39,8 +39,8 @@ refer to [10-pres_retr_stack_mem.asm](./10-pres_retr_stack_mem.asm)
         add r2, r0, r1
         bx lr
     ~~~ 
-    the values `1` and `3` in `r0` and `r1` respectively are overwritten by `5` and `9` when `get_value` is called
-    * the system must have a way to _remember_ `1` and `3` so that they can be restored when the function returns. here is how: it pushes `1` and `3` into stack memory, calls the function, function returns and system pops `1` and `3` from stack memory. the scenario above would be viz:
+the values `1` and `3` in `r0` and `r1` respectively are overwritten by `5` and `9` when `get_value` is called
+* the system must have a way to _remember_ `1` and `3` so that they can be restored when the function returns. here is how: it pushes `1` and `3` into stack memory, calls the function, function returns and system pops `1` and `3` from stack memory. the scenario above would be viz:
     ~~~asm
     mov r0, #1
     mov r1, #3
@@ -54,7 +54,7 @@ refer to [10-pres_retr_stack_mem.asm](./10-pres_retr_stack_mem.asm)
         add r2, r0, r1
         bx lr
     ~~~ 
-    the values `1` and `3` in `r0` and `r1` respectively are pushed to stack memory. `get_value` is called, therefore, `r0` and `r1` get the values `5` and `9`. they get their initial values once  `get_value` returns. this is how values `1` and `3` anre _persisted_
+the values `1` and `3` in `r0` and `r1` respectively are pushed to stack memory. `get_value` is called, therefore, `r0` and `r1` get the values `5` and `9`. they get their initial values once  `get_value` returns. this is how values `1` and `3` anre _persisted_
     * notice how register `sp`, containing the stack pointer, behaves during the `push` and `pop` operations
     * notice how register `pc`, containing the address of the next instruction/operation after `bl`, behaves when `bl` and `bx` execute 
 * this is the simple "traditional" way of implementing scope (global, local) and handling return values; the advanced way places the value(s) in an unused register(s) (which cannot be determined in advance in real life)
