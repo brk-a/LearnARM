@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+PATH_TO_KERNEL=./kernel-qemu-5.4.51-buster
+PATH_TO_IMAGE=./2020-02-13-raspbian-buster.img
+
+unzip -tzgf 2020-02-13-raspbian-buster.zip
+sudo apt-get install qemu-system
+qemu-system-arm -kernel $PATH_TO_KERNEL -cpu arm1176 -m 256 -M versatilepb\
+    -serial stdio -append "root=/dev/sda2 rootfstype=ext4 rw" -hda\
+    $PATH_TO_IMAGE -nic user,hostfwd=tcp::5022-:22 -no-reboot
+
+
