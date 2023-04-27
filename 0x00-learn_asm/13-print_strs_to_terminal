@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+##how to comile and run 13-print_strs_to_terminal.s
+FILE_TO_COMPILE=./13-print_strs_to_terminal.s
+
+as $FILE_TO_COMPILE -o 13-hello_world.o
+ld 13-hello_world.o -o 13-hello_world
+./13-hello_world
