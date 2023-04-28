@@ -95,6 +95,9 @@ no code to explain
 |0x01|0x02|0x03|0x04|0x05|0x06|0x07|0x08|0x09|0x0a|0x0b|0x0c| 0x0d|0x0e| 0x0f| 0x10|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |104 'h'|101 'e'|108 'l'| 108 'l'|111 'o'|44 ','|32 ' '|119 'w'|111 'o'|114 'r'|108 'l'|100 'd'|10 '\n'|0 '\000'| ...| ...|
+
         
         notice the `0 '\000'` character at the end of the string; that is the [null character](https://www.dictionary.com/browse/null-character)
+
+        
 * as always, [RTFM](https://ftp.gnu.org/old-gnu/Manuals/gdb/html_node/gdb_toc.html)
