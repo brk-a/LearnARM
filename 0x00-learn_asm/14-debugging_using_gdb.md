@@ -1,5 +1,5 @@
 # Debug using GDB
-use the code in [13-print_strs_to_terminal.s](./13-print_strs_to_terminal.s)
+use the code in [13-print_strs_to_terminal.s](./13-print_strs_to_terminal.s) and [13-print_strs_to_terminal](./13-print_strs_to_terminal)
 
 ### the code 
 no code to explain
@@ -37,19 +37,21 @@ no code to explain
         ~~~
 
         the layout shows the instructions in the application. would be great if the registers could be shown too; well, there are two ways:
-        one: see what is inside a particular register, say, `r0`
+        
+        one, see what is inside a particular register, say, `r0`
 
         ~~~bash
         info register r0
         ~~~
         
-        two: see what is inside all the registers (same way as the emulator)
+        two, see what is inside all the registers (same way as the emulator)
 
         ~~~bash
         layout regs
         ~~~
 
         there should be three views on screen (split-screen-type): (1) the registers at the top, (2) the instructions in the middle and (3) the terminal at the bottom. use `CTRL-X-O` (`control-X-O` on mac)to navigate the first two
+
         4. step into the next instruction
 
         ~~~bash
@@ -74,7 +76,7 @@ no code to explain
         * say the string _hello, world_ is stored in the stack mem starting at address 0x01 and that the address `0x01` is stored in `r1`. do this
 
             ~~~bash
-            x/10x $r1
+            x/10c $r1
             ~~~
 
         this tells the system to examine 10 units of memory starting at the address stored in `r1` and show the contents in hexadecimal format
@@ -88,7 +90,7 @@ no code to explain
         6. `x/10c $r1` -->  examine 10 units of memory starting at the address stored in `r1` and show the contents in character format (ascii text, with ascii code)
         7. `x/15d $r1` -->  examine 15 units of memory starting at the address stored in `r1` and show the contents in decimal format
 
-        for the string _hello, world_, the following will apprear
+        for the string _hello, world_ the following will apprear
 
 |0x01|0x02|0x03|0x04|0x05|0x06|0x07|0x08|0x09|0x0a|0x0b|0x0c| 0x0d|0x0e| 0x0f| 0x10|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
