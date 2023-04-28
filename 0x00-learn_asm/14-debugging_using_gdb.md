@@ -97,7 +97,7 @@ no code to explain
 |104 'h'|101 'e'|108 'l'| 108 'l'|111 'o'|44 ','|32 ' '|119 'w'|111 'o'|114 'r'|108 'l'|100 'd'|10 '\n'|0 '\000'| ...| ...|
 
         
-        notice the `0 '\000'` character at the end of the string; that is the [null character](https://www.dictionary.com/browse/null-character)
+    notice the `0 '\000'` character at the end of the string; that is the [null character](https://www.dictionary.com/browse/null-character)
 
-        
+
 * as always, [RTFM](https://ftp.gnu.org/old-gnu/Manuals/gdb/html_node/gdb_toc.html)
