@@ -79,7 +79,7 @@ no code to explain
             x/10c $r1
             ~~~
 
-        this tells the system to examine 10 units of memory starting at the address stored in `r1` and show the contents in hexadecimal format
+        this tells the system to examine 10 units of memory starting at the address stored in `r1` and show the contents in character format
 
         more formats:
         1. `x/10d $r1` -->  examine 10 units of memory starting at the address stored in `r1` and show the contents in decimal format
